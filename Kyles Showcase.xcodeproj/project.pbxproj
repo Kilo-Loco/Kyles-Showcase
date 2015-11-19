@@ -12,6 +12,11 @@
 		7C5F12ED1BFE6801009AC1F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C5F12EB1BFE6801009AC1F4 /* Main.storyboard */; };
 		7C5F12EF1BFE6801009AC1F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C5F12EE1BFE6801009AC1F4 /* Assets.xcassets */; };
 		7C5F12F21BFE6801009AC1F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C5F12F01BFE6801009AC1F4 /* LaunchScreen.storyboard */; };
+		7C5F12FE1BFE6867009AC1F4 /* SF-UI-2 in Resources */ = {isa = PBXBuildFile; fileRef = 7C5F12FD1BFE6867009AC1F4 /* SF-UI-2 */; };
+		7C5F13001BFE869A009AC1F4 /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5F12FF1BFE869A009AC1F4 /* MaterialView.swift */; };
+		7C5F13031BFE88A4009AC1F4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5F13021BFE88A4009AC1F4 /* Constants.swift */; };
+		7C5F13051BFE8EB7009AC1F4 /* MaterialButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5F13041BFE8EB7009AC1F4 /* MaterialButton.swift */; };
+		7C5F13071BFE9574009AC1F4 /* MaterialTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5F13061BFE9574009AC1F4 /* MaterialTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		7C5F12EE1BFE6801009AC1F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C5F12F11BFE6801009AC1F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7C5F12F31BFE6801009AC1F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7C5F12FD1BFE6867009AC1F4 /* SF-UI-2 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "SF-UI-2"; sourceTree = "<group>"; };
+		7C5F12FF1BFE869A009AC1F4 /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
+		7C5F13021BFE88A4009AC1F4 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		7C5F13041BFE8EB7009AC1F4 /* MaterialButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialButton.swift; sourceTree = "<group>"; };
+		7C5F13061BFE9574009AC1F4 /* MaterialTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +64,59 @@
 		7C5F12E61BFE6801009AC1F4 /* Kyles Showcase */ = {
 			isa = PBXGroup;
 			children = (
+				7C5F13011BFE8746009AC1F4 /* Utilities */,
+				7C5F12FC1BFE6825009AC1F4 /* Model */,
+				7C5F12FB1BFE681E009AC1F4 /* View */,
+				7C5F12FA1BFE6815009AC1F4 /* Controller */,
+				7C5F12F91BFE680A009AC1F4 /* Resources */,
 				7C5F12E71BFE6801009AC1F4 /* AppDelegate.swift */,
-				7C5F12E91BFE6801009AC1F4 /* ViewController.swift */,
 				7C5F12EB1BFE6801009AC1F4 /* Main.storyboard */,
 				7C5F12EE1BFE6801009AC1F4 /* Assets.xcassets */,
 				7C5F12F01BFE6801009AC1F4 /* LaunchScreen.storyboard */,
 				7C5F12F31BFE6801009AC1F4 /* Info.plist */,
 			);
 			path = "Kyles Showcase";
+			sourceTree = "<group>";
+		};
+		7C5F12F91BFE680A009AC1F4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7C5F12FD1BFE6867009AC1F4 /* SF-UI-2 */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		7C5F12FA1BFE6815009AC1F4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7C5F12E91BFE6801009AC1F4 /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		7C5F12FB1BFE681E009AC1F4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7C5F12FF1BFE869A009AC1F4 /* MaterialView.swift */,
+				7C5F13041BFE8EB7009AC1F4 /* MaterialButton.swift */,
+				7C5F13061BFE9574009AC1F4 /* MaterialTextField.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		7C5F12FC1BFE6825009AC1F4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		7C5F13011BFE8746009AC1F4 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				7C5F13021BFE88A4009AC1F4 /* Constants.swift */,
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,6 +179,7 @@
 			files = (
 				7C5F12F21BFE6801009AC1F4 /* LaunchScreen.storyboard in Resources */,
 				7C5F12EF1BFE6801009AC1F4 /* Assets.xcassets in Resources */,
+				7C5F12FE1BFE6867009AC1F4 /* SF-UI-2 in Resources */,
 				7C5F12ED1BFE6801009AC1F4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,8 +191,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C5F13071BFE9574009AC1F4 /* MaterialTextField.swift in Sources */,
+				7C5F13051BFE8EB7009AC1F4 /* MaterialButton.swift in Sources */,
+				7C5F13001BFE869A009AC1F4 /* MaterialView.swift in Sources */,
 				7C5F12EA1BFE6801009AC1F4 /* ViewController.swift in Sources */,
 				7C5F12E81BFE6801009AC1F4 /* AppDelegate.swift in Sources */,
+				7C5F13031BFE88A4009AC1F4 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
