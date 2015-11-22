@@ -187,10 +187,32 @@
                             <constraint firstItem="hiO-lL-k7H" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="zR3-pI-Wsy"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="kLR-2B-sfi" kind="show" identifier="loggedIn" id="imY-2C-e59"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="245" y="325"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="MGa-bV-l6B">
+            <objects>
+                <viewController id="kLR-2B-sfi" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wEZ-qh-iBz"/>
+                        <viewControllerLayoutGuide type="bottom" id="Oqm-Yn-1GN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Keh-SL-Skl">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Ui-0T-B7l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="929" y="325"/>
         </scene>
     </scenes>
     <resources>

@@ -21,6 +21,7 @@
 		7C5F130C1BFFBAFF009AC1F4 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C5F13091BFFBAFE009AC1F4 /* Bolts.framework */; };
 		7C5F130D1BFFBB01009AC1F4 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C5F130A1BFFBAFE009AC1F4 /* FBSDKCoreKit.framework */; };
 		7C5F130E1BFFBB01009AC1F4 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C5F130B1BFFBAFE009AC1F4 /* FBSDKLoginKit.framework */; };
+		7C5F13111BFFEC05009AC1F4 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5F13101BFFEC04009AC1F4 /* DataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		7C5F13091BFFBAFE009AC1F4 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		7C5F130A1BFFBAFE009AC1F4 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		7C5F130B1BFFBAFE009AC1F4 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		7C5F13101BFFEC04009AC1F4 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		FAEF000D58336B3CB7D4731E /* Pods-Kyles Showcase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kyles Showcase.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kyles Showcase/Pods-Kyles Showcase.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,6 +82,7 @@
 		7C5F12E61BFE6801009AC1F4 /* Kyles Showcase */ = {
 			isa = PBXGroup;
 			children = (
+				7C5F130F1BFFEBE6009AC1F4 /* Services */,
 				7C5F13081BFFBAE4009AC1F4 /* Frameworks */,
 				7C5F13011BFE8746009AC1F4 /* Utilities */,
 				7C5F12FC1BFE6825009AC1F4 /* Model */,
@@ -144,6 +147,14 @@
 				7C5F130B1BFFBAFE009AC1F4 /* FBSDKLoginKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7C5F130F1BFFEBE6009AC1F4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				7C5F13101BFFEC04009AC1F4 /* DataService.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 		8A9CE909C8627E1B9993131F /* Frameworks */ = {
@@ -287,6 +298,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C5F13071BFE9574009AC1F4 /* MaterialTextField.swift in Sources */,
+				7C5F13111BFFEC05009AC1F4 /* DataService.swift in Sources */,
 				7C5F13051BFE8EB7009AC1F4 /* MaterialButton.swift in Sources */,
 				7C5F13001BFE869A009AC1F4 /* MaterialView.swift in Sources */,
 				7C5F12EA1BFE6801009AC1F4 /* ViewController.swift in Sources */,
