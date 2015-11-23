@@ -13,6 +13,9 @@ import FBSDKLoginKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -24,11 +27,6 @@ class ViewController: UIViewController {
         if NSUserDefaults.standardUserDefaults().valueForKey(KEY_UID) != nil {
             self.performSegueWithIdentifier(SEGUE_LOGGED_IN, sender: nil)
         }
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     @IBAction func fbBtnPressed(sender: UIButton!) {
@@ -56,6 +54,52 @@ class ViewController: UIViewController {
             }
             
         }
+    }
+    
+    @IBAction func attemptLogin(sender: UIButton!) {
+        
+        if let email = self.emailField.text where email != "", let pwd = self.passwordField.text where pwd != "" {
+            
+            DataService.ds.REF_BASE.authUser(email, password: pwd, withCompletionBlock: { error, authData in
+                
+                if error != nil {
+                    
+                    print(error)
+                    
+                    if error.code == STATUS_INVALID_USER {
+                        DataService.ds.REF_BASE.createUser(email, password: pwd, withValueCompletionBlock: { error, result in
+                            
+                            if error != nil {
+                                self.showErrorAlert("Could not create account", msg: "Problem creating account. Try something else")
+                            } else {
+                                NSUserDefaults.standardUserDefaults().setValue(result[KEY_UID], forKey: KEY_UID)
+                                
+                                DataService.ds.REF_BASE.authUser(email, password: pwd, withCompletionBlock: nil)
+                                self.performSegueWithIdentifier(SEGUE_LOGGED_IN, sender: nil)
+                                
+                            }
+                            
+                        })
+                    } else {
+                        self.showErrorAlert("Could not login", msg: "Please check username or password")
+                    }
+                    
+                } else {
+                    self.performSegueWithIdentifier(SEGUE_LOGGED_IN, sender: nil)
+                }
+                
+            })
+            
+        } else {
+            self.showErrorAlert("Email and Password Required", msg: "You must enter an email and a password")
+        }
+    }
+    
+    func showErrorAlert(title: String, msg: String) {
+        let alert = UIAlertController(title: title, message: msg, preferredStyle: .Alert)
+        let action = UIAlertAction(title: "OK", style: .Default, handler: nil)
+        alert.addAction(action)
+        presentViewController(alert, animated: true, completion: nil)
     }
 
 
