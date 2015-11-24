@@ -5,4 +5,5 @@ use_frameworks!
 
 target 'Kyles Showcase' do
 pod 'Firebase', '>= 2.4.3'
+pod 'Alamofire', '~> 3.0'
 end

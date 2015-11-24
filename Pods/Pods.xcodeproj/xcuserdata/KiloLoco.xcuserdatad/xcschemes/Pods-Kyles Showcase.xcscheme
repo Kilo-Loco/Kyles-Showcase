@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '852E93AF9B358F42712A3B37'
+               BlueprintIdentifier = '4320B4D97B18F0FA6E8DACBF'
                BlueprintName = 'Pods-Kyles Showcase'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods_Kyles_Showcase.framework'>
